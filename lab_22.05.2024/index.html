@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>22.05.2024</title>
+   <style>
+      ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+      }
+
+      .box_green {
+         background-color: green;
+      }
+
+      .box_yellow {
+         background-color: yellow;
+      }
+
+      .ul li:nth-child(1) {
+         background-color: rgb(211, 211, 51);
+      }
+
+      .ul li:nth-child(2) {
+         background-color: rgb(180, 180, 40);
+      }
+
+      .ul li:nth-child(3) {
+         background-color: rgb(141, 141, 52);
+      }
+
+      .ul li:nth-child(4) {
+         background-color: rgb(119, 119, 74);
+      }
+
+      .ul li:nth-child(5) {
+         background-color: rgb(104, 104, 85);
+      }
+   </style>
+</head>
+
+<body>
+   <main id="content"></main>
+   <ul class="ul">
+      <li>Софійський собор:Один із найстаріших храмів Київської Русі, заснований у 11 столітті. Собор є об'єктом
+         Всесвітньої спадщини ЮНЕСКО.</li>
+      <li>Києво-Печерська лавра:Комплекс монастирів, заснований у 11 столітті. Лавра є одним із найважливіших релігійних
+         центрів України.</li>
+      <li>Золоті ворота:Ворота, збудовані в 11 столітті, які є одними з найстаріших укріплень Києва.</li>
+      <li>Андріївський узвіз:Історична вулиця, розташована на крутому пагорбі. На вулиці розташовано багато сувенірних
+         магазинів, кафе та арт-галерей.</li>
+      <li>Хрещатик:Головна вулиця Києва, де розташовано багато магазинів, кафе, ресторанів та історичних будівель.</li>
+   </ul>
+
+   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+   <script type="text/babel">
+
+      const user = {
+         name: 'Olex',
+         surname: 'Vari',
+         patronymic: 'Moran',
+         phone: '439647664',
+         email: 'Clar@ukr.net',
+      };
+
+      const cityInformation = {
+         city: 'Київ',
+         country: 'Украина',
+         yearConstruction: '482 ',
+         population: '2884000',
+      };
+
+      ReactDOM.createRoot(document.getElementById("content")).render(
+         <div>
+            <div class="box_yellow">
+               <ul>
+                  <li>Імя: {user.name}</li>
+                  <li>Призвище: {user.surname}</li>
+                  <li>По батькові: {user.patronymic}</li>
+                  <li>Телефон: {user.phone}</li>
+                  <li>Пошта: {user.email}</li>
+               </ul>
+            </div>
+            <div class="box_green">
+               <ul>
+                  <li>Місто: {cityInformation.city}</li>
+                  <li>Країна: {cityInformation.country}</li>
+                  <li>Рік побудови: {cityInformation.yearConstruction}</li>
+                  <li>Кількість людей: {cityInformation.population}</li>
+               </ul>
+            </div>
+         </div>
+      );
+   </script>
+</body>
+
+</html>
